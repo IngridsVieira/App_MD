@@ -12,3 +12,6 @@ if btn1 == True:
 
 l = np.random.randint(5,20,10)
 st.write(l)
+
+title = st.text_input('Movie title', 'Life of Brian')
+st.write('The current movie title is', title)
