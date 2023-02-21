@@ -27,26 +27,30 @@ st.title("Words Frequency!")
 
 text = st.text_area('Digite um texto:')
 
-#cleaning
-text = text.lower()
-words = text.split()
-words = [word.strip('.,!;()[]') for word in words]
-words = [word.replace("'s", '') for word in words]
+btn2 = st.button("Analisar texto:")
 
-#finding unique
-unique = []
-for word in words:
-    if word not in unique:
-        unique.append(word)
-        
-word_frequency = []
-new_list = []
-for i in range(len(unique)):
-    a = unique[i]
-    if len(a) >= 3:
-        new_list.append(a)
-        word_frequency.append(text.count(a))
-        
-df = pd.DataFrame({'Palavra' : new_list,
-                                'Frequência' : word_frequency}, 
-                                columns=['Palavra','Frequência'])
+if btn2 == True:
+    #cleaning
+    text = text.lower()
+    words = text.split()
+    words = [word.strip('.,!;()[]') for word in words]
+    words = [word.replace("'s", '') for word in words]
+
+    #finding unique
+    unique = []
+    for word in words:
+        if word not in unique:
+            unique.append(word)
+
+    word_frequency = []
+    new_list = []
+    for i in range(len(unique)):
+        a = unique[i]
+        if len(a) >= 3:
+            new_list.append(a)
+            word_frequency.append(text.count(a))
+
+    df = pd.DataFrame({'Palavra' : new_list,
+                                    'Frequência' : word_frequency}, 
+                                    columns=['Palavra','Frequência'])
+    df
