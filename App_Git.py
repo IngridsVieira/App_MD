@@ -5,6 +5,12 @@ import pandas as pd
 
 st.write("# oieeee!!")
 
+dic_map = {"lat": [-25.45012],
+    "lon": [-49.23315]}
+
+df_mapa = pd.DataFrame(dic_map)
+st.map(df_mapa)
+
 st.write("#Novo Aplicativo")
 
 btn1 = st.button("Novo botao")
