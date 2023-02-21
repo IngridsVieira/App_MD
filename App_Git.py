@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 
 
-st.title("# Mapa search!")
+st.title("Mapa search!")
 
 Latitude = st.number_input('Latitude:',)
 Longitude = st.number_input('Longitude:',)
