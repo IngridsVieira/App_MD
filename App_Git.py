@@ -21,7 +21,8 @@ st.write("Suas coordenadas são {} de Latitude e {} de Longitude".format(Latitud
 
 st.write("### Sua localização no mapa:")
 
-dic_map = {"lat": [-25.45012],
-    "lon": [-49.23315]}
+dic_map = {"lat": [-25.45012,-25.43462],
+    "lon": [-49.23315,-49.25334]}
+
 df_mapa = pd.DataFrame(dic_map)
 st.map(df_mapa)
