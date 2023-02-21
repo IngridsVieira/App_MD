@@ -15,4 +15,4 @@ st.write(l)
 
 Latitude = st.text_input('Latitude:', 'Digite as coordenadas da sua latitude.')
 Longitude = st.text_input('Longitude:', 'Digite as coordenadas da sua longitude.')
-st.write("The current movie title is {}".format(Latitude))
+st.write("Suas coordenadas são {} de Latitude e {} de Longitude".format(Latitude,Longitude))
