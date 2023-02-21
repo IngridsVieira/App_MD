@@ -5,11 +5,7 @@ import pandas as pd
 
 st.write("# oieeee!!")
 
-dic_map = {"lat": [-25.45012],
-    "lon": [-49.23315]}
 
-df_mapa = pd.DataFrame(dic_map)
-st.map(df_mapa)
 
 st.write("#Novo Aplicativo")
 
@@ -29,9 +25,10 @@ if Latitude != "" and Longitude != "":
 
 st.write("### Sua localização no mapa:")
 
+
 if Latitude != "" and Longitude != "":
-    dic_map = {"lat": [Latitude],
-        "lon": [Longitude]}
-    df_mapa = pd.DataFrame(dic_map)
-    st.map(df_mapa)
+    dic_map = {"lat": [Latitude],"lon": [Longitude]}
+
+df_mapa = pd.DataFrame(dic_map)
+st.map(df_mapa)
 
