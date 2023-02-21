@@ -17,7 +17,7 @@ st.write(l)
 
 Latitude = st.text_input('Latitude:',)
 Longitude = st.text_input('Longitude:',)
-if Latitude != "":
+if Latitude != "" and Longitude != "":
     st.write("Suas coordenadas são {} de Latitude e {} de Longitude".format(Latitude,Longitude))
 
 st.write("### Sua localização no mapa:")
