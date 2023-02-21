@@ -1,6 +1,7 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
+from PIL import Image
 #import matplotlib.pyplot as plt
 
 
@@ -80,3 +81,10 @@ else:
     #ax.plot(df2)
     #st.pyplot(fig)
     
+    
+#---------------------------------------------------------------
+st.title("Media Page") 
+
+image = Image.open('sunrise.jpg')
+
+st.image(image, caption='Sunrise by the mountains')
