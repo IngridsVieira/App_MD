@@ -21,12 +21,11 @@ if btn1 == True:
         df_mapa = pd.DataFrame(dic_map)
         st.map(df_mapa)
         
-        
+#---------------------------------------------------------------
+
 st.title("Words Frequency!")
 
 text = st.text_area('Digite um texto:')
-
-
 
 #cleaning
 text = text.lower()
