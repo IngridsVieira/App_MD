@@ -66,7 +66,7 @@ from io import StringIO
 
 uploaded_file = st.file_uploader("Choose a file")
 btn3 = st.button("Gerar gráfico:")
-    if btn3 == True:
+if btn3 == True:
     if uploaded_file != "":
         dataframe = pd.read_csv(uploaded_file, sep = ";")
         st.write(dataframe)
