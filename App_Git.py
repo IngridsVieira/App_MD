@@ -29,6 +29,8 @@ st.write("### Sua localização no mapa:")
 if Latitude != "" and Longitude != "":
     dic_map = {"lat": [Latitude],"lon": [Longitude]}
 
-df_mapa = pd.DataFrame(dic_map)
-st.map(df_mapa)
+    df_mapa = pd.DataFrame(dic_map)
+    st.map(df_mapa)
+else:
+    st.write("### Insira as suas coordenadas.")
 
