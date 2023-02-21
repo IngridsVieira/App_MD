@@ -26,6 +26,8 @@ st.title("Words Frequency!")
 
 text = st.text_area('Digite um texto:')
 
+
+
 #cleaning
 text = text.lower()
 words = text.split()
@@ -37,6 +39,15 @@ unique = []
 for word in words:
     if word not in unique:
         unique.append(word)
-
-#sort
-unique.sort()
+        
+word_frequency = []
+new_list = []
+for i in range(len(unique)):
+    a = unique[i]
+    if len(a) >= 3:
+        new_list.append(a)
+        word_frequency.append(text.count(a))
+        
+df = pd.DataFrame({'Palavra' : new_list,
+                                'Frequência' : word_frequency}, 
+                                columns=['Palavra','Frequência'])
