@@ -17,15 +17,15 @@ st.write(l)
 
 Latitude = st.text_input('Latitude:',)
 Longitude = st.text_input('Longitude:',)
+
 if Latitude != "" and Longitude != "":
     st.write("Suas coordenadas são {} de Latitude e {} de Longitude".format(Latitude,Longitude))
 
 st.write("### Sua localização no mapa:")
 
-if Latitude != "":
+if Latitude != "" and Longitude != "":
     dic_map = {"lat": [Latitude],
         "lon": [Longitude]}
-
     df_mapa = pd.DataFrame(dic_map)
     st.map(df_mapa)
 
