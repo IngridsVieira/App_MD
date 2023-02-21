@@ -21,9 +21,10 @@ st.write("Suas coordenadas são {} de Latitude e {} de Longitude".format(Latitud
 
 st.write("### Sua localização no mapa:")
 
-dic_map = {"lat": [Latitude],
-    "lon": [Longitude]}
+if Latitude != "":
+    dic_map = {"lat": [Latitude],
+        "lon": [Longitude]}
 
-df_mapa = pd.DataFrame(dic_map)
-st.map(df_mapa)
+    df_mapa = pd.DataFrame(dic_map)
+    st.map(df_mapa)
 
