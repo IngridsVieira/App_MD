@@ -61,9 +61,10 @@ if btn2 == True:
   #-----------------------------------------------------------------------      
 st.title("Graph Plot!")    
             
-st.write("# Lendo um arquivo csv")
 
 from io import StringIO
+
 uploaded_file = st.file_uploader("Choose a file")
-dataframe = pd.read_csv(uploaded_file, sep = ";")
-st.write(dataframe)
+if uploaded_file != "":
+    dataframe = pd.read_csv(uploaded_file, sep = ";")
+    st.write(dataframe)
