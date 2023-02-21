@@ -13,5 +13,6 @@ if btn1 == True:
 l = np.random.randint(5,20,10)
 st.write(l)
 
-title = st.text_input('Movie title', 'Life of Brian')
+Latitude = st.text_input('Latitude:', 'Digite as coordenadas da sua latitude.')
+Longitude = st.text_input('Longitude:', 'Digite as coordenadas da sua longitude.')
 st.write('The current movie title is', title)
