@@ -64,14 +64,20 @@ st.title("Graph Plot!")
 
 from io import StringIO
 
-uploaded_file = st.file_uploader("Choose a file")
+df2 = st.file_uploader("Choose a file")
 btn3 = st.button("Gerar tabela:")
 if btn3 == True:
-    if uploaded_file != "":
-        dataframe = pd.read_csv(uploaded_file, sep = ";")
+    if df2 != "":
+        dataframe = pd.read_csv(df2, sep = ";")
         st.write(dataframe)
 else: 
     st.write("Insira um arquivo.")
     
 btn4 = st.button("Gerar gráfico:")
-if btn3 == True:
+    if btn4 == True:
+        df2 = df2.iloc[0]
+        
+        fig, ax = plt.subplots(1,1)
+        ax.plot(df2)
+        st.pyplot(fig)
+    
