@@ -21,9 +21,9 @@ st.write("Suas coordenadas são {} de Latitude e {} de Longitude".format(Latitud
 
 st.write("### Sua localização no mapa:")
 
-df = pd.DataFrame(
-    np.random.randn(1000, 2) / [50, 50] + [37.76, -122.4],
-    columns=['lat', 'lon'])
+dic_map = {"lat": [-25.45012],
+    "lon": [-49.23315]}
 
-st.map(df)
+df_mapa = pd.DataFrame(dic_map)
+st.map(df_mapa)
 
