@@ -24,5 +24,5 @@ if btn1 == True:
         
 st.title("Words Frequency!")
 
-txt = st.text_area('Digite um texto:)
+txt = st.text_area('Digite um texto:')
 
