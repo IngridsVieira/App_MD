@@ -15,14 +15,14 @@ if btn1 == True:
 l = np.random.randint(5,20,10)
 st.write(l)
 
-Latitude = st.text_input('Latitude:', 'Digite as coordenadas da sua latitude.')
-Longitude = st.text_input('Longitude:', 'Digite as coordenadas da sua longitude.')
+Latitude = st.text_input('Latitude:',)
+Longitude = st.text_input('Longitude:',)
 st.write("Suas coordenadas são {} de Latitude e {} de Longitude".format(Latitude,Longitude))
 
 st.write("### Sua localização no mapa:")
 
-dic_map = {"lat": [-25.45012],
-    "lon": [-49.23315]}
+dic_map = {"lat": [Latitude],
+    "lon": [Longitude]}
 
 df_mapa = pd.DataFrame(dic_map)
 st.map(df_mapa)
