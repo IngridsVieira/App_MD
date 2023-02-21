@@ -1,5 +1,7 @@
 import streamlit as st
 import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
 
 st.write("# oieeee!!")
 
@@ -21,3 +23,5 @@ st.write("### Sua localização no mapa:")
 
 dic_map = {"lat": [-25.45012],
     "lon": [-49.23315]}
+df_mapa = pd.DataFrame(dic_map)
+st.map(df_mapa)
