@@ -88,3 +88,5 @@ st.title("Media Page")
 image = Image.open('sunrise.jpg')
 
 st.image(image, caption='Sunrise by the mountains')
+
+st.video("https://www.youtube.com/watch?v=4bHUsy74Fss")
