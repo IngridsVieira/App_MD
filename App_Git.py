@@ -74,10 +74,9 @@ else:
     st.write("Insira um arquivo.")
     
 btn4 = st.button("Gerar gráfico:")
-    if btn4 == True:
-        df2 = df2.iloc[0]
-        
-        fig, ax = plt.subplots(1,1)
-        ax.plot(df2)
-        st.pyplot(fig)
+if btn4 == True:
+    df2 = df2.iloc[0] 
+    fig, ax = plt.subplots(1,1)
+    ax.plot(df2)
+    st.pyplot(fig)
     
