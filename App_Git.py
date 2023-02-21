@@ -1,7 +1,7 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 
 st.title("Mapa search!")
@@ -74,19 +74,9 @@ if btn3 == True:
 else: 
     st.write("Insira um arquivo.")
     
-btn4 = st.button("Gerar gráfico:")
-if btn4 == True:
-    fig, ax = plt.subplots(1,1)
-    ax.plot(df2)
-    st.pyplot(fig)
+#btn4 = st.button("Gerar gráfico:")
+#if btn4 == True:
+    #fig, ax = plt.subplots(1,1)
+    #ax.plot(df2)
+    #st.pyplot(fig)
     
-
-st.write("# Grafico de Vendas")
-fig, ax = plt.subplots(1,1)
-
-if marc != "Sem Marcador":
-    ax.plot(np.random.randint(values[0], values[1],5), marker = marc)
-else:
-    ax.plot(np.random.randint(values[0],values[1],5))
-
-st.pyplot(fig)
