@@ -79,3 +79,13 @@ if btn4 == True:
     ax.plot(df2)
     st.pyplot(fig)
     
+
+st.write("# Grafico de Vendas")
+fig, ax = plt.subplots(1,1)
+
+if marc != "Sem Marcador":
+    ax.plot(np.random.randint(values[0], values[1],5), marker = marc)
+else:
+    ax.plot(np.random.randint(values[0],values[1],5))
+
+st.pyplot(fig)
