@@ -17,8 +17,8 @@ if btn1 == True:
 l = np.random.randint(5,20,10)
 st.write(l)
 
-Latitude = st.text_input('Latitude:',)
-Longitude = st.text_input('Longitude:',)
+Latitude = st.number_input('Latitude:',)
+Longitude = st.number_input('Longitude:',)
 
 if Latitude != "" and Longitude != "":
     st.write("Suas coordenadas são {} de Latitude e {} de Longitude".format(Latitude,Longitude))
