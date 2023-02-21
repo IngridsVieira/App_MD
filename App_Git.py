@@ -65,6 +65,8 @@ st.title("Graph Plot!")
 from io import StringIO
 
 uploaded_file = st.file_uploader("Choose a file")
-if uploaded_file != "":
-    dataframe = pd.read_csv(uploaded_file, sep = ";")
-    st.write(dataframe)
+btn3 = st.button("Gerar gráfico:")
+    if btn3 == True:
+    if uploaded_file != "":
+        dataframe = pd.read_csv(uploaded_file, sep = ";")
+        st.write(dataframe)
