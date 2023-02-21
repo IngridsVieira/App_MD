@@ -30,7 +30,7 @@ text = st.text_area('Digite um texto:')
 btn2 = st.button("Analisar texto:")
 
 if btn2 == True:
-    if text != ""
+    if text != "":
         #cleaning
         text = text.lower()
         words = text.split()
@@ -55,3 +55,5 @@ if btn2 == True:
                                         'Frequência' : word_frequency}, 
                                         columns=['Palavra','Frequência'])
         df
+    else:
+        st.write("Insira um texto")
